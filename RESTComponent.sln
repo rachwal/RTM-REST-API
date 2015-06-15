@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTComponent.Console", "Console\RESTComponent.Console.csproj", "{D51B7B82-A658-4900-A932-C6008BDFD2D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTComponent.Api", "Api\RESTComponent.Api.csproj", "{3CCE772B-2D3C-424A-955D-2E01A090CEC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTComponent.RTComponent", "Component\RESTComponent.RTComponent.csproj", "{D5166226-E10F-4323-90AF-0E6DD1EFC1E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTComponent.RTComponent.Configuration", "Configuration\RESTComponent.RTComponent.Configuration.csproj", "{3A4184AE-528F-46D0-B21B-6CBC6E83BEC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTComponent.ImagesProvider", "ImageProvider\RESTComponent.ImagesProvider.csproj", "{98908500-E932-47FE-8D8F-C40C127F182B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9614DEE6-2C35-4A2C-AD24-CBD9248AE09E}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CCE772B-2D3C-424A-955D-2E01A090CEC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CCE772B-2D3C-424A-955D-2E01A090CEC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CCE772B-2D3C-424A-955D-2E01A090CEC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CCE772B-2D3C-424A-955D-2E01A090CEC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5166226-E10F-4323-90AF-0E6DD1EFC1E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5166226-E10F-4323-90AF-0E6DD1EFC1E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5166226-E10F-4323-90AF-0E6DD1EFC1E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5166226-E10F-4323-90AF-0E6DD1EFC1E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A4184AE-528F-46D0-B21B-6CBC6E83BEC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A4184AE-528F-46D0-B21B-6CBC6E83BEC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A4184AE-528F-46D0-B21B-6CBC6E83BEC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A4184AE-528F-46D0-B21B-6CBC6E83BEC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D51B7B82-A658-4900-A932-C6008BDFD2D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D51B7B82-A658-4900-A932-C6008BDFD2D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D51B7B82-A658-4900-A932-C6008BDFD2D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D51B7B82-A658-4900-A932-C6008BDFD2D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98908500-E932-47FE-8D8F-C40C127F182B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98908500-E932-47FE-8D8F-C40C127F182B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98908500-E932-47FE-8D8F-C40C127F182B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98908500-E932-47FE-8D8F-C40C127F182B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
