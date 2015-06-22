@@ -80,7 +80,7 @@ namespace RESTComponent.RTComponent.Component
         {
             handle = execHandle;
             ImageProvider.NewImage += ImageProviderNewImage;
-            ApiManager.Start();
+            ApiManager.StartAsync();
             return base.OnActivated(execHandle);
         }
 

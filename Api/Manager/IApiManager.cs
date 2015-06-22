@@ -9,7 +9,7 @@ namespace RESTComponent.Api.Manager
 {
     public interface IApiManager
     {
-        void Start();
+        void StartAsync();
         void Stop();
     }
 }

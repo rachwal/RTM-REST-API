@@ -54,7 +54,7 @@ namespace RESTComponent.RTComponent.Manager
                 catch (Exception)
                 {
                     Console.WriteLine();
-                    Console.WriteLine("Start naming service before running component");
+                    Console.WriteLine("StartAsync naming service before running component");
                     Console.WriteLine(@"More info at http://www.openrtm.org/openrtm/en/node/1420");
                 }
             });

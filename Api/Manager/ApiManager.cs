@@ -28,7 +28,7 @@ namespace RESTComponent.Api.Manager
             componentConfiguration.ConfigurationChanged += OnConfigurationChanged;
         }
 
-        public void Start()
+        public void StartAsync()
         {
             if (isRunning)
                 return;
