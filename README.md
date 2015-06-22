@@ -12,7 +12,7 @@ Prerequisites
 
 Getting started
 ---------------
-Download or Clone this repository from Github. Open RESTComponent.sln and Build. See [Wiki](https://github.com/rachwal/RTM-REST-API/wiki/Getting-Started) for details ...
+Download or Clone this repository from Github. Open RESTComponent.sln and Build. See [Wiki](https://github.com/rachwal/RTM-REST-API/wiki/Getting-Started) for details.
 
 Under the hood
 ---------------
