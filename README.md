@@ -21,6 +21,12 @@ You can use the [NuGet package manager](https://visualstudiogallery.msdn.microso
 
 Download or Clone this repository from Github. Open RESTComponent.sln and Build.
 
+Get free client app!
+---------------
+<a href="https://itunes.apple.com/us/app/rtm-client/id1009085714?ls=1&mt=8">
+<img class="centered" src="images/Download_on_the_App_Store_Badge_US-UK_135x40.svg" alt="RTM Client"/>
+</a>
+	  
 Under the hood
 ---------------
 Under the hood, RTM-REST-API is built on the following components:
