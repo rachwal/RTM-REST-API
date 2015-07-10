@@ -26,15 +26,3 @@ Get free client app!
 <a href="https://itunes.apple.com/us/app/rtm-client/id1009085714?ls=1&mt=8">
 <img class="centered" src="http://rachwal.github.io/RTM-REST-API/images/Download_on_the_App_Store_Badge_US-UK_135x40.svg" alt="RTM Client"/>
 </a>
-	  
-Under the hood
----------------
-Under the hood, RTM-REST-API is built on the following components:
-
-* [Unity Container](https://msdn.microsoft.com/en-us/library/ff647202.aspx)
-* [Microsoft ASP.NET Web API 2.2 OWIN Self Host](https://www.nuget.org/packages/Microsoft.AspNet.WebApi.OwinSelfHost)
-* OpenRTM CameraImage Specification
-
-License
----------------
-This code is released under the MIT license. Any code contributions you make must be made under the same license.
