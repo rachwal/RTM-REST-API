@@ -8,7 +8,7 @@ What Does RTM REST API Do?
 ------------
 You can use the RTM REST API to stream video from remote device to OpenRTM platform using HTTP protocol. Component exposes POST method named 'images' that you can use send jpeg image encoded as 64 bit string.
 
-sample request representation
+Sample request representation:
 
 	application/json 
 
