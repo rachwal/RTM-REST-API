@@ -2,7 +2,7 @@ RTM-REST-API
 ========================
 What is RTM REST API? 
 ------------
-RTM REST API is a free, open source Robotic Technology Middleware component that supports communication between OpenRTM platform and remote clients using REST API. Clients of this component can run anywhere, and they don't require you to use a particular language or framework. Please refer to [OpenRTM](http://openrtm.org/) for general framework insights and documentation of the platform. In addition, RTM REST API is extensible. You can write component extensions that change the behavior of the component, or add new capabilities.
+RTM REST API is a free, open source Robotic Technology Middleware component that supports communication between OpenRTM platform and remote clients using REST API. Clients of this component can run anywhere, and they don't require you to use a particular programming language or framework. Please refer to [OpenRTM](http://openrtm.org/) for general framework insights and documentation of the platform. RTM REST API is extensible. You can write component extensions that change the behavior of the component, or add new capabilities.
 
 What Does RTM REST API Do? 
 ------------
