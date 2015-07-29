@@ -28,8 +28,7 @@ namespace RESTComponent.RTComponent.Component
     [CustomProfile("Author", "Bartosz Rachwal")]
     public class CameraStream : DataFlowComponent
     {
-        [OutPort(PortName = "out")]
-        private readonly OutPort<CameraImage> outport = new OutPort<CameraImage>();
+        [OutPort(PortName = "out")] private readonly OutPort<CameraImage> outport = new OutPort<CameraImage>();
 
         private ConfigurationSet configurationSet;
         private int handle;
@@ -47,10 +46,7 @@ namespace RESTComponent.RTComponent.Component
         [Configuration(DefaultValue = "localhost", Name = "host")]
         public string Host
         {
-            get
-            {
-                return Configuration != null ? Configuration.Host : "localhost";
-            }
+            get { return Configuration != null ? Configuration.Host : "localhost"; }
             set
             {
                 if (Configuration != null)
@@ -63,10 +59,7 @@ namespace RESTComponent.RTComponent.Component
         [Configuration(DefaultValue = "9000", Name = "port")]
         public int Port
         {
-            get
-            {
-                return Configuration != null ? Configuration.Port : 9000;
-            }
+            get { return Configuration != null ? Configuration.Port : 9000; }
             set
             {
                 if (Configuration != null)

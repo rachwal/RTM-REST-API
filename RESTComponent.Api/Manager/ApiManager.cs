@@ -5,6 +5,7 @@
 // Created by Bartosz Rachwal.
 // Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved.
 // 
+
 using System;
 using System.Globalization;
 using System.Threading;
@@ -45,10 +46,7 @@ namespace RESTComponent.Api.Manager
                     ServerFactory = "Microsoft.Owin.Host.HttpListener"
                 };
 
-                using (WebApp.Start(options, appBuilder =>
-                {
-                    startupConfiguration.Configuration(appBuilder);
-                }))
+                using (WebApp.Start(options, appBuilder => { startupConfiguration.Configuration(appBuilder); }))
                 {
                     Console.WriteLine("Started {0}", DateTime.Now.ToString(CultureInfo.InvariantCulture));
                     while (true)

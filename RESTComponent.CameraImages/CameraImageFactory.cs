@@ -1,5 +1,5 @@
 ﻿// RESTComponent
-// RESTComponent.RTComponent
+// RESTComponent.CameraImages
 // CameraImageFactory.cs
 // 
 // Created by Bartosz Rachwal.
@@ -39,16 +39,16 @@ namespace RESTComponent.CameraImages
 
             var rect = new Rectangle(0, 0, bitmap.Width, bitmap.Height);
             var bitmapData = bitmap.LockBits(rect, ImageLockMode.ReadOnly, bitmap.PixelFormat);
-            var length = bitmapData.Stride * bitmapData.Height;
+            var length = bitmapData.Stride*bitmapData.Height;
             var outputPixels = new byte[length];
             Marshal.Copy(bitmapData.Scan0, outputPixels, 0, length);
             bitmap.UnlockBits(bitmapData);
 
-            var bitsPerPixel = (ushort)((int)bitmap.PixelFormat >> 8 & 0xFF);
+            var bitsPerPixel = (ushort) ((int) bitmap.PixelFormat >> 8 & 0xFF);
 
             cameraImage.Bpp = bitsPerPixel;
-            cameraImage.Width = (ushort)bitmap.Width;
-            cameraImage.Height = (ushort)bitmap.Height;
+            cameraImage.Width = (ushort) bitmap.Width;
+            cameraImage.Height = (ushort) bitmap.Height;
             cameraImage.Pixels = outputPixels.ToList();
 
             return cameraImage;

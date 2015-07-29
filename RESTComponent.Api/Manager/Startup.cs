@@ -5,6 +5,7 @@
 // Created by Bartosz Rachwal.
 // Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved.
 // 
+
 using System.Web.Http;
 using Microsoft.Practices.Unity;
 using Owin;
@@ -27,8 +28,8 @@ namespace RESTComponent.Api.Manager
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+                defaults: new {id = RouteParameter.Optional}
+                );
             config.DependencyResolver = new UnityDependencyResolver(unityContainer.CreateChildContainer());
             appBuilder.UseWebApi(config);
         }

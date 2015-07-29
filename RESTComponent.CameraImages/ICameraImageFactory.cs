@@ -1,5 +1,5 @@
 // RESTComponent
-// RESTComponent.RTComponent
+// RESTComponent.CameraImages
 // ICameraImageFactory.cs
 // 
 // Created by Bartosz Rachwal.

@@ -5,6 +5,7 @@
 // Created by Bartosz Rachwal.
 // Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved.
 // 
+
 using Microsoft.Practices.Unity;
 using RESTComponent.Api.Manager;
 using RESTComponent.CameraImages;
@@ -15,9 +16,9 @@ using RESTComponent.RTComponent.Manager;
 
 namespace RESTComponent.Console
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             RunComponent(args);
             WaitForExit();
@@ -35,7 +36,8 @@ namespace RESTComponent.Console
             container.RegisterType<IStartup, Startup>();
             container.RegisterType<IApiManager, ApiManager>(new ContainerControlledLifetimeManager());
 
-            container.RegisterType<IComponentConfiguration, ComponentConfiguration>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IComponentConfiguration, ComponentConfiguration>(
+                new ContainerControlledLifetimeManager());
             container.RegisterType<IComponentManager, ComponentManager>(new ContainerControlledLifetimeManager());
 
             container.Resolve<IComponentManager>().Start(args);

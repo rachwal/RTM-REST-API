@@ -5,6 +5,7 @@
 // Created by Bartosz Rachwal.
 // Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved.
 // 
+
 using System;
 using System.Threading.Tasks;
 using OpenRTM.Extension;
@@ -24,7 +25,8 @@ namespace RESTComponent.RTComponent.Manager
         private readonly IComponentConfiguration componentConfiguration;
         private readonly IImageProvider imageProvider;
 
-        public ComponentManager(IImageProvider provider, ICameraImageFactory factory, IComponentConfiguration configuration, IApiManager manager)
+        public ComponentManager(IImageProvider provider, ICameraImageFactory factory,
+            IComponentConfiguration configuration, IApiManager manager)
         {
             apiManager = manager;
             componentConfiguration = configuration;
@@ -37,7 +39,7 @@ namespace RESTComponent.RTComponent.Manager
             Task.Factory.StartNew(() =>
             {
                 var manager = new OpenRTM.Core.Manager(args);
-                manager.AddTypes(typeof(CorbaProtocolManager));
+                manager.AddTypes(typeof (CorbaProtocolManager));
                 manager.Activate();
                 try
                 {
