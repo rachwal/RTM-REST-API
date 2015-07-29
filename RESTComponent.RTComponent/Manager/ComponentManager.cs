@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 using OpenRTM.Extension;
 using OpenRTM.IIOP;
 using RESTComponent.Api.Manager;
+using RESTComponent.CameraImages;
 using RESTComponent.ImagesProvider;
 using RESTComponent.RTComponent.Component;
 using RESTComponent.RTComponent.Configuration;
-using RESTComponent.RTComponent.ImageFactory;
 
 namespace RESTComponent.RTComponent.Manager
 {

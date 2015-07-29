@@ -7,9 +7,10 @@
 // 
 using Microsoft.Practices.Unity;
 using RESTComponent.Api.Manager;
+using RESTComponent.CameraImages;
+using RESTComponent.Images.Decoder;
 using RESTComponent.ImagesProvider;
 using RESTComponent.RTComponent.Configuration;
-using RESTComponent.RTComponent.ImageFactory;
 using RESTComponent.RTComponent.Manager;
 
 namespace RESTComponent.Console
@@ -27,6 +28,8 @@ namespace RESTComponent.Console
             var container = new UnityContainer();
 
             container.RegisterType<IImageProvider, ImageProvider>(new ContainerControlledLifetimeManager());
+            container.RegisterType<IImagesDecoder, ImagesDecoder>();
+
             container.RegisterType<ICameraImageFactory, CameraImageFactory>();
 
             container.RegisterType<IStartup, Startup>();

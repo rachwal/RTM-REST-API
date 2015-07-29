@@ -5,14 +5,14 @@
 // Created by Bartosz Rachwal.
 // Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved.
 // 
+
 using System;
-using System.Linq;
 using OpenRTM.Core;
 using OpenRTM.Extension;
 using RESTComponent.Api.Manager;
+using RESTComponent.CameraImages;
 using RESTComponent.ImagesProvider;
 using RESTComponent.RTComponent.Configuration;
-using RESTComponent.RTComponent.ImageFactory;
 
 namespace RESTComponent.RTComponent.Component
 {
@@ -126,14 +126,14 @@ namespace RESTComponent.RTComponent.Component
             }
 
             Config.OnSetConfigurationSet -= UpdateConfiguration;
-            
+
             this.Deactivate(handle);
-            
+
             foreach (var entry in configurationSet.ConfigurationData)
             {
                 this.AddConfigurationValue(entry.Key, entry.Value.ToString());
             }
-          
+
             Config.OnSetConfigurationSet += UpdateConfiguration;
         }
     }

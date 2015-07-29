@@ -5,45 +5,33 @@
 // Created by Bartosz Rachwal.
 // Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved.
 // 
-using System;
+
 using System.Drawing;
 using System.Drawing.Imaging;
-using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using OpenRTM.Core;
+using RESTComponent.Images.Decoder;
 
-namespace RESTComponent.RTComponent.ImageFactory
+namespace RESTComponent.CameraImages
 {
     public class CameraImageFactory : ICameraImageFactory
     {
+        private readonly IImagesDecoder decoder;
+
+        public CameraImageFactory(IImagesDecoder imagesDecoder)
+        {
+            decoder = imagesDecoder;
+        }
+
         public CameraImage Create(string value)
         {
-            var bitmap = Decode(value);
-            var cameraImage = CopyBytes(bitmap);
+            var bitmap = decoder.Decode(value);
+            var cameraImage = Create(bitmap);
             return cameraImage;
         }
 
-        private Bitmap Decode(string encodedPicture)
-        {
-            try
-            {
-                var bytes = Convert.FromBase64String(encodedPicture);
-
-                Bitmap decoded;
-                using (var stream = new MemoryStream(bytes))
-                {
-                    decoded = new Bitmap(stream);
-                }
-                return decoded;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
-        }
-
-        private CameraImage CopyBytes(Bitmap bitmap)
+        public CameraImage Create(Bitmap bitmap)
         {
             var cameraImage = new CameraImage();
             if (bitmap == null)

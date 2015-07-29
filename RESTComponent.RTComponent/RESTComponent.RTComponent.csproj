@@ -37,10 +37,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ImageFactory\CameraImageFactory.cs" />
     <Compile Include="Component\CameraStream.cs" />
     <Compile Include="Manager\ComponentManager.cs" />
-    <Compile Include="ImageFactory\ICameraImageFactory.cs" />
     <Compile Include="Manager\IComponentManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -52,15 +50,23 @@
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Api\RESTComponent.Api.csproj">
+    <ProjectReference Include="..\RESTComponent.Api\RESTComponent.Api.csproj">
       <Project>{3cce772b-2d3c-424a-955d-2e01a090cec3}</Project>
       <Name>RESTComponent.Api</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ImageProvider\RESTComponent.ImagesProvider.csproj">
-      <Project>{98908500-e932-47fe-8d8f-c40c127f182b}</Project>
-      <Name>RESTComponent.ImagesProvider</Name>
+    <ProjectReference Include="..\RESTComponent.CameraImages\RESTComponent.CameraImages.csproj">
+      <Project>{05270e5c-f4d1-4684-9793-002b2fc7a6bf}</Project>
+      <Name>RESTComponent.CameraImages</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Configuration\RESTComponent.RTComponent.Configuration.csproj">
+    <ProjectReference Include="..\RESTComponent.Images.Decoder\RESTComponent.Images.Decoder.csproj">
+      <Project>{c13baf70-a7f3-4cdf-a438-bdb4d713cd38}</Project>
+      <Name>RESTComponent.Images.Decoder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RESTComponent.Images.Provider\RESTComponent.Images.Provider.csproj">
+      <Project>{98908500-e932-47fe-8d8f-c40c127f182b}</Project>
+      <Name>RESTComponent.Images.Provider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RESTComponent.RTComponent.Configuration.csproj\RESTComponent.RTComponent.Configuration.csproj">
       <Project>{3a4184ae-528f-46d0-b21b-6cbc6e83bec6}</Project>
       <Name>RESTComponent.RTComponent.Configuration</Name>
     </ProjectReference>
