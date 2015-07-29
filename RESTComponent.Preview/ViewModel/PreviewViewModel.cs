@@ -26,15 +26,16 @@ namespace RESTComponent.Preview.ViewModel
         private readonly IImageProvider provider;
         private readonly IImagesDecoder decoder;
 
+        public ImageSource PreviewImage { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public PreviewViewModel(IImageProvider imageProvider, IImagesDecoder imagesDecoder)
         {
             decoder = imagesDecoder;
             provider = imageProvider;
             provider.NewImage += OnNewImage;
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        public ImageSource PreviewImage { get; set; }
 
         private void OnNewImage(object sender, EventArgs e)
         {
