@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("RTComponent")]
+[assembly: AssemblyTitle("RESTComponent.RTComponent")]
 [assembly: AssemblyDescription("Created by Bartosz Rachwal")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("The National Institute of Advanced Industrial Science and Technology, Japan")]
