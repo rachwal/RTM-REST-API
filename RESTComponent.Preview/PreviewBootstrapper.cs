@@ -2,17 +2,18 @@
 // RESTComponent.Preview
 // PreviewBootstrapper.cs
 // 
-// Created by Bartosz Rachwal.
-// Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved.
-// 
+// Created by Bartosz Rachwal. 
+// Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved. 
 
 using System.Windows;
+using System.Windows.Media.Imaging;
 using Microsoft.Practices.Prism.UnityExtensions;
 using Microsoft.Practices.Unity;
 using RESTComponent.Api.Manager;
 using RESTComponent.CameraImages;
 using RESTComponent.Images.Decoder;
-using RESTComponent.ImagesProvider;
+using RESTComponent.Images.Decoder.ImageSource;
+using RESTComponent.Images.Provider;
 using RESTComponent.Preview.View;
 using RESTComponent.Preview.ViewModel;
 using RESTComponent.RTComponent.Configuration;
@@ -25,7 +26,7 @@ namespace RESTComponent.Preview
         protected override void ConfigureContainer()
         {
             Container.RegisterType<IImageProvider, ImageProvider>(new ContainerControlledLifetimeManager());
-            Container.RegisterType<IImagesDecoder, ImagesDecoder>();
+            Container.RegisterType<IImagesDecoder<BitmapImage>, BitmapImageDecoder>();
 
             Container.RegisterType<ICameraImageFactory, CameraImageFactory>();
 

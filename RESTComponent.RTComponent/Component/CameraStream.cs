@@ -2,16 +2,15 @@
 // RESTComponent.RTComponent
 // CameraStream.cs
 // 
-// Created by Bartosz Rachwal.
-// Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved.
-// 
+// Created by Bartosz Rachwal. 
+// Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved. 
 
 using System;
 using OpenRTM.Core;
 using OpenRTM.Extension;
 using RESTComponent.Api.Manager;
 using RESTComponent.CameraImages;
-using RESTComponent.ImagesProvider;
+using RESTComponent.Images.Provider;
 using RESTComponent.RTComponent.Configuration;
 
 namespace RESTComponent.RTComponent.Component

@@ -2,15 +2,16 @@
 // RESTComponent.Console
 // Program.cs
 // 
-// Created by Bartosz Rachwal.
-// Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved.
-// 
+// Created by Bartosz Rachwal. 
+// Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved. 
 
+using System.Drawing;
 using Microsoft.Practices.Unity;
 using RESTComponent.Api.Manager;
 using RESTComponent.CameraImages;
 using RESTComponent.Images.Decoder;
-using RESTComponent.ImagesProvider;
+using RESTComponent.Images.Decoder.Bitmap;
+using RESTComponent.Images.Provider;
 using RESTComponent.RTComponent.Configuration;
 using RESTComponent.RTComponent.Manager;
 
@@ -29,7 +30,7 @@ namespace RESTComponent.Console
             var container = new UnityContainer();
 
             container.RegisterType<IImageProvider, ImageProvider>(new ContainerControlledLifetimeManager());
-            container.RegisterType<IImagesDecoder, ImagesDecoder>();
+            container.RegisterType<IImagesDecoder<Bitmap>, BitmapDecoder>();
 
             container.RegisterType<ICameraImageFactory, CameraImageFactory>();
 

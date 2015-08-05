@@ -1,5 +1,5 @@
 ﻿// RESTComponent
-// RESTComponent.Console
+// RESTComponent.Images.Decoder.ImageSource
 // AssemblyInfo.cs
 // 
 // Created by Bartosz Rachwal. 
@@ -12,12 +12,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("RESTComponent.Console")]
-[assembly: AssemblyDescription("Created by Bartosz Rachwal")]
+[assembly: AssemblyTitle("RESTComponent.Images.Decoder.ImageSource")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("The National Institute of Advanced Industrial Science and Technology, Japan")]
-[assembly: AssemblyProduct("RT Middleware REST Component")]
-[assembly: AssemblyCopyright("Copyright © 2015")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("RESTComponent.Images.Decoder.ImageSource")]
+[assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -29,7 +29,7 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 
-[assembly: Guid("0ebf2e54-5885-4bc7-a05d-62efb4b92114")]
+[assembly: Guid("217315b5-7b0c-4771-9705-093ef7aaa7ce")]
 
 // Version information for an assembly consists of the following four values:
 //
