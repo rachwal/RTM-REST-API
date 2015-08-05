@@ -66,7 +66,7 @@
       <Project>{98908500-e932-47fe-8d8f-c40c127f182b}</Project>
       <Name>RESTComponent.Images.Provider</Name>
     </ProjectReference>
-    <ProjectReference Include="..\RESTComponent.RTComponent.Configuration.csproj\RESTComponent.RTComponent.Configuration.csproj">
+    <ProjectReference Include="..\RESTComponent.RTComponent.Configuration\RESTComponent.RTComponent.Configuration.csproj">
       <Project>{3a4184ae-528f-46d0-b21b-6cbc6e83bec6}</Project>
       <Name>RESTComponent.RTComponent.Configuration</Name>
     </ProjectReference>

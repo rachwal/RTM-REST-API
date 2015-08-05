@@ -209,13 +209,13 @@
       <Project>{c13baf70-a7f3-4cdf-a438-bdb4d713cd38}</Project>
       <Name>RESTComponent.Images.Decoder</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RESTComponent.RTComponent.Configuration\RESTComponent.RTComponent.Configuration.csproj">
+      <Project>{3a4184ae-528f-46d0-b21b-6cbc6e83bec6}</Project>
+      <Name>RESTComponent.RTComponent.Configuration</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RESTComponent.RTComponent\RESTComponent.RTComponent.csproj">
       <Project>{d5166226-e10f-4323-90af-0e6dd1efc1e8}</Project>
       <Name>RESTComponent.RTComponent</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RESTComponent.RTComponent.Configuration.csproj\RESTComponent.RTComponent.Configuration.csproj">
-      <Project>{3a4184ae-528f-46d0-b21b-6cbc6e83bec6}</Project>
-      <Name>RESTComponent.RTComponent.Configuration</Name>
     </ProjectReference>
     <ProjectReference Include="..\RESTComponent.Images.Provider\RESTComponent.Images.Provider.csproj">
       <Project>{98908500-e932-47fe-8d8f-c40c127f182b}</Project>

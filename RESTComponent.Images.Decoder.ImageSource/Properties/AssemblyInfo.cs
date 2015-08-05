@@ -13,11 +13,11 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 
 [assembly: AssemblyTitle("RESTComponent.Images.Decoder.ImageSource")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Created by Bartosz Rachwal")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("RESTComponent.Images.Decoder.ImageSource")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCompany("The National Institute of Advanced Industrial Science and Technology, Japan")]
+[assembly: AssemblyProduct("RT Middleware REST Component")]
+[assembly: AssemblyCopyright("Copyright © 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
