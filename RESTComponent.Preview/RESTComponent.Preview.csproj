@@ -197,6 +197,10 @@
       <Project>{05270e5c-f4d1-4684-9793-002b2fc7a6bf}</Project>
       <Name>RESTComponent.CameraImages</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RESTComponent.Images.Decoder.Bitmap\RESTComponent.Images.Decoder.Bitmap.csproj">
+      <Project>{bf7002f3-ecba-435a-96d7-4637103ce529}</Project>
+      <Name>RESTComponent.Images.Decoder.Bitmap</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RESTComponent.Images.Decoder.ImageSource\RESTComponent.Images.Decoder.ImageSource.csproj">
       <Project>{217315b5-7b0c-4771-9705-093ef7aaa7ce}</Project>
       <Name>RESTComponent.Images.Decoder.ImageSource</Name>

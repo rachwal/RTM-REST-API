@@ -5,6 +5,7 @@
 // Created by Bartosz Rachwal. 
 // Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved. 
 
+using System.Drawing;
 using System.Windows;
 using System.Windows.Media.Imaging;
 using Microsoft.Practices.Prism.UnityExtensions;
@@ -27,6 +28,7 @@ namespace RESTComponent.Preview
         {
             Container.RegisterType<IImageProvider, ImageProvider>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IImagesDecoder<BitmapImage>, BitmapImageDecoder>();
+            Container.RegisterType<IImagesDecoder<Bitmap>, Images.Decoder.Bitmap.BitmapDecoder>();
 
             Container.RegisterType<ICameraImageFactory, CameraImageFactory>();
 
