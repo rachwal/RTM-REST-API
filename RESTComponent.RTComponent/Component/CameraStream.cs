@@ -10,8 +10,8 @@ using OpenRTM.Core;
 using OpenRTM.Extension;
 using RESTComponent.Api.Manager;
 using RESTComponent.CameraImages;
-using RESTComponent.Images.Provider;
 using RESTComponent.RTComponent.Configuration;
+using RTM.Images.Provider;
 
 namespace RESTComponent.RTComponent.Component
 {

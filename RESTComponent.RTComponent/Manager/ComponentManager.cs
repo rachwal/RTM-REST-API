@@ -11,9 +11,9 @@ using OpenRTM.Extension;
 using OpenRTM.IIOP;
 using RESTComponent.Api.Manager;
 using RESTComponent.CameraImages;
-using RESTComponent.Images.Provider;
 using RESTComponent.RTComponent.Component;
 using RESTComponent.RTComponent.Configuration;
+using RTM.Images.Provider;
 
 namespace RESTComponent.RTComponent.Manager
 {

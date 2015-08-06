@@ -9,11 +9,11 @@ using System.Drawing;
 using Microsoft.Practices.Unity;
 using RESTComponent.Api.Manager;
 using RESTComponent.CameraImages;
-using RESTComponent.Images.Decoder;
-using RESTComponent.Images.Decoder.Bitmap;
-using RESTComponent.Images.Provider;
 using RESTComponent.RTComponent.Configuration;
 using RESTComponent.RTComponent.Manager;
+using RTM.Images.Decoder;
+using RTM.Images.Decoder.Bitmap;
+using RTM.Images.Provider;
 
 namespace RESTComponent.Console
 {

@@ -12,13 +12,13 @@ using Microsoft.Practices.Prism.UnityExtensions;
 using Microsoft.Practices.Unity;
 using RESTComponent.Api.Manager;
 using RESTComponent.CameraImages;
-using RESTComponent.Images.Decoder;
-using RESTComponent.Images.Decoder.ImageSource;
-using RESTComponent.Images.Provider;
 using RESTComponent.Preview.View;
 using RESTComponent.Preview.ViewModel;
 using RESTComponent.RTComponent.Configuration;
 using RESTComponent.RTComponent.Manager;
+using RTM.Images.Decoder;
+using RTM.Images.Decoder.ImageSource;
+using RTM.Images.Provider;
 
 namespace RESTComponent.Preview
 {
@@ -28,7 +28,7 @@ namespace RESTComponent.Preview
         {
             Container.RegisterType<IImageProvider, ImageProvider>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IImagesDecoder<BitmapImage>, BitmapImageDecoder>();
-            Container.RegisterType<IImagesDecoder<Bitmap>, Images.Decoder.Bitmap.BitmapDecoder>();
+            Container.RegisterType<IImagesDecoder<Bitmap>, RTM.Images.Decoder.Bitmap.BitmapDecoder>();
 
             Container.RegisterType<ICameraImageFactory, CameraImageFactory>();
 

@@ -7,7 +7,7 @@
 
 using System.Web.Http;
 using Microsoft.Practices.Unity;
-using RESTComponent.Images.Provider;
+using RTM.Images.Provider;
 
 namespace RESTComponent.Api.Images
 {

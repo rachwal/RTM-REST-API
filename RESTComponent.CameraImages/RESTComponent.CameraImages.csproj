@@ -31,6 +31,26 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="OpenRTM.Core, Version=1.3.0.0, Culture=neutral, PublicKeyToken=9107744efe29c21e, processorArchitecture=MSIL" />
+    <Reference Include="RTM.Images, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RTM.Images.1.0.0.0\lib\net30\RTM.Images.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RTM.Images.Decoder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RTM.Images.1.0.0.0\lib\net30\RTM.Images.Decoder.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RTM.Images.Decoder.Bitmap, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RTM.Images.1.0.0.0\lib\net30\RTM.Images.Decoder.Bitmap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RTM.Images.Decoder.ImageSource, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RTM.Images.1.0.0.0\lib\net30\RTM.Images.Decoder.ImageSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RTM.Images.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RTM.Images.1.0.0.0\lib\net30\RTM.Images.Provider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -41,10 +61,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RESTComponent.Images.Decoder\RESTComponent.Images.Decoder.csproj">
-      <Project>{c13baf70-a7f3-4cdf-a438-bdb4d713cd38}</Project>
-      <Name>RESTComponent.Images.Decoder</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

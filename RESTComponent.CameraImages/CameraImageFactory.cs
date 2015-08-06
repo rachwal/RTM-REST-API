@@ -10,7 +10,7 @@ using System.Drawing.Imaging;
 using System.Linq;
 using System.Runtime.InteropServices;
 using OpenRTM.Core;
-using RESTComponent.Images.Decoder;
+using RTM.Images.Decoder;
 
 namespace RESTComponent.CameraImages
 {
