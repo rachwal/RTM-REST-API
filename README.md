@@ -25,6 +25,7 @@ Server 2012.
 * Supported .NET Frameworks: Microsoft .NET Framework 4.5 or higher
 * Microsoft [Visual Studio](https://www.visualstudio.com).
 You can use the [NuGet package manager](https://visualstudiogallery.msdn.microsoft.com/27077b70-9dad-4c64-adcf-c7cf6bc9970c) in Visual Studio to install the [Unity Container](https://msdn.microsoft.com/en-us/library/ff647202.aspx) and [Microsoft ASP.NET Web API 2.2 OWIN Self Host](https://www.nuget.org/packages/Microsoft.AspNet.WebApi.OwinSelfHost) assemblies in component.
+* [RTM Images](https://www.nuget.org/packages/RTM.Images/) library
 * [OpenRTM.NET](http://www.sec.co.jp/robot/download_rtm.html) 1.3.1 or higher 
 
 Download or Clone this repository from Github. Open RESTComponent.sln and Build.
