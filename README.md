@@ -32,3 +32,7 @@ Download or Clone this repository from Github. Open RESTComponent.sln and Build.
 Get free client app!
 ---------------
 <a href="https://itunes.apple.com/us/app/rtm-client/id1009085714?ls=1&mt=8"><img src="http://rachwal.github.io/RTM-REST-API/images/Download_on_the_App_Store_Badge_US-UK_135x40.svg" alt="RTM Client"/></a>     <a href="https://play.google.com/store/apps/details?id=jp.go.aist.rachwal.rtmclient"><img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png"/></a>     <a href="https://www.microsoft.com/store/apps/9NBLGGH1RK7G"><img src="https://cmsresources.windowsphone.com/devcenter/en-us/legacy_v1/img/badgegenerator/English_wstore_black_258x67.png" alt="Download from Windows Store" /></a>
+
+License
+---------------
+This code is released under the MIT license. Any code contributions you make must be made under the same license.
