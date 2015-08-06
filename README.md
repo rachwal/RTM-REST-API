@@ -6,7 +6,7 @@ RTM REST API is a free, open source Robotic Technology Middleware component that
 
 What Does RTM REST API Do? 
 ------------
-You can use the RTM REST API to stream video from remote device to OpenRTM platform using HTTP protocol. Component exposes POST method named 'images' that you can use send jpeg image encoded as 64 bit string.
+You can use the RTM REST API to stream video from remote device to OpenRTM platform using HTTP protocol. Component exposes POST method named 'images' that you can use send jpeg image encoded as base64 string.
 
 Sample request representation:
 
