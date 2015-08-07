@@ -6,11 +6,12 @@
 // Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved. 
 
 using System;
+using System.Linq;
 using OpenRTM.Core;
 using OpenRTM.Extension;
 using RESTComponent.Api.Manager;
-using RESTComponent.CameraImages;
 using RESTComponent.RTComponent.Configuration;
+using RTM.Images.Factory;
 using RTM.Images.Provider;
 
 namespace RESTComponent.RTComponent.Component
@@ -38,7 +39,7 @@ namespace RESTComponent.RTComponent.Component
         }
 
         public IImageProvider ImageProvider { get; set; }
-        public ICameraImageFactory CameraImageFactory { get; set; }
+        public IImageFactory ImageFactory { get; set; }
         public IComponentConfiguration Configuration { get; set; }
         public IApiManager ApiManager { get; set; }
 
@@ -58,7 +59,7 @@ namespace RESTComponent.RTComponent.Component
         [Configuration(DefaultValue = "9000", Name = "port")]
         public int Port
         {
-            get { return Configuration != null ? Configuration.Port : 9000; }
+            get { return Configuration?.Port ?? 9000; }
             set
             {
                 if (Configuration != null)
@@ -87,8 +88,15 @@ namespace RESTComponent.RTComponent.Component
         private void ImageProviderNewImage(object sender, EventArgs e)
         {
             var value = ImageProvider.EncodedImage;
-            var newImage = CameraImageFactory.Create(value);
-            outport.Write(newImage);
+            var image = ImageFactory.Create(value);
+            var cameraImage = new CameraImage
+            {
+                Bpp = (ushort) image.Bpp,
+                Width = (ushort) image.Width,
+                Height = (ushort) image.Height,
+                Pixels = image.Pixels.ToList()
+            };
+            outport.Write(cameraImage);
         }
 
         private void UpdateConfiguration(ConfigurationSet obj)

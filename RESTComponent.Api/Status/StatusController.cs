@@ -15,7 +15,7 @@ namespace RESTComponent.Api.Status
     {
         public string Get()
         {
-            return string.Format("Connected\nComponent time: {0}", DateTime.Now.ToString(CultureInfo.InvariantCulture));
+            return $"Connected\nComponent time: {DateTime.Now.ToString(CultureInfo.InvariantCulture)}";
         }
     }
 }

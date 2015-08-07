@@ -106,24 +106,28 @@
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RTM.Images, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RTM.Images.1.0.0.0\lib\net30\RTM.Images.dll</HintPath>
+    <Reference Include="RTM.Images, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RTM.Images.1.0.1.0\lib\net30\RTM.Images.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RTM.Images.Decoder, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RTM.Images.1.0.0.0\lib\net30\RTM.Images.Decoder.dll</HintPath>
+      <HintPath>..\packages\RTM.Images.1.0.1.0\lib\net30\RTM.Images.Decoder.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RTM.Images.Decoder.Bitmap, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RTM.Images.1.0.0.0\lib\net30\RTM.Images.Decoder.Bitmap.dll</HintPath>
+      <HintPath>..\packages\RTM.Images.1.0.1.0\lib\net30\RTM.Images.Decoder.Bitmap.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RTM.Images.Decoder.ImageSource, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RTM.Images.1.0.0.0\lib\net30\RTM.Images.Decoder.ImageSource.dll</HintPath>
+      <HintPath>..\packages\RTM.Images.1.0.1.0\lib\net30\RTM.Images.Decoder.ImageSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RTM.Images.Factory, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RTM.Images.1.0.1.0\lib\net30\RTM.Images.Factory.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="RTM.Images.Provider, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RTM.Images.1.0.0.0\lib\net30\RTM.Images.Provider.dll</HintPath>
+      <HintPath>..\packages\RTM.Images.1.0.1.0\lib\net30\RTM.Images.Provider.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -212,10 +216,6 @@
     <ProjectReference Include="..\RESTComponent.Api\RESTComponent.Api.csproj">
       <Project>{3cce772b-2d3c-424a-955d-2e01a090cec3}</Project>
       <Name>RESTComponent.Api</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RESTComponent.CameraImages\RESTComponent.CameraImages.csproj">
-      <Project>{05270e5c-f4d1-4684-9793-002b2fc7a6bf}</Project>
-      <Name>RESTComponent.CameraImages</Name>
     </ProjectReference>
     <ProjectReference Include="..\RESTComponent.RTComponent.Configuration\RESTComponent.RTComponent.Configuration.csproj">
       <Project>{3a4184ae-528f-46d0-b21b-6cbc6e83bec6}</Project>

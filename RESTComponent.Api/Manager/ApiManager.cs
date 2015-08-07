@@ -38,7 +38,7 @@ namespace RESTComponent.Api.Manager
 
             Task.Factory.StartNew(() =>
             {
-                var address = string.Format("http://{0}:{1}", componentConfiguration.Host, componentConfiguration.Port);
+                var address = $"http://{componentConfiguration.Host}:{componentConfiguration.Port}";
 
                 var options = new StartOptions(address)
                 {
@@ -50,11 +50,12 @@ namespace RESTComponent.Api.Manager
                     Console.WriteLine("Started {0}", DateTime.Now.ToString(CultureInfo.InvariantCulture));
                     while (true)
                     {
-                        if (tokenSource.Token.IsCancellationRequested)
+                        if (!tokenSource.Token.IsCancellationRequested)
                         {
-                            isRunning = false;
-                            return;
+                            continue;
                         }
+                        isRunning = false;
+                        return;
                     }
                 }
             }, tokenSource.Token);
@@ -62,10 +63,7 @@ namespace RESTComponent.Api.Manager
 
         public void Stop()
         {
-            if (tokenSource != null)
-            {
-                tokenSource.Cancel();
-            }
+            tokenSource?.Cancel();
         }
 
         private void OnConfigurationChanged(object sender, EventArgs e)

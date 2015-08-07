@@ -8,11 +8,11 @@
 using System.Drawing;
 using Microsoft.Practices.Unity;
 using RESTComponent.Api.Manager;
-using RESTComponent.CameraImages;
 using RESTComponent.RTComponent.Configuration;
 using RESTComponent.RTComponent.Manager;
 using RTM.Images.Decoder;
 using RTM.Images.Decoder.Bitmap;
+using RTM.Images.Factory;
 using RTM.Images.Provider;
 
 namespace RESTComponent.Console
@@ -32,7 +32,7 @@ namespace RESTComponent.Console
             container.RegisterType<IImageProvider, ImageProvider>(new ContainerControlledLifetimeManager());
             container.RegisterType<IImagesDecoder<Bitmap>, BitmapDecoder>();
 
-            container.RegisterType<ICameraImageFactory, CameraImageFactory>();
+            container.RegisterType<IImageFactory, ImageFactory>();
 
             container.RegisterType<IStartup, Startup>();
             container.RegisterType<IApiManager, ApiManager>(new ContainerControlledLifetimeManager());

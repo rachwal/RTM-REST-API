@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 using OpenRTM.Extension;
 using OpenRTM.IIOP;
 using RESTComponent.Api.Manager;
-using RESTComponent.CameraImages;
 using RESTComponent.RTComponent.Component;
 using RESTComponent.RTComponent.Configuration;
+using RTM.Images.Factory;
 using RTM.Images.Provider;
 
 namespace RESTComponent.RTComponent.Manager
@@ -20,11 +20,11 @@ namespace RESTComponent.RTComponent.Manager
     public class ComponentManager : IComponentManager
     {
         private readonly IApiManager apiManager;
-        private readonly ICameraImageFactory cameraImageFactory;
+        private readonly IImageFactory cameraImageFactory;
         private readonly IComponentConfiguration componentConfiguration;
         private readonly IImageProvider imageProvider;
 
-        public ComponentManager(IImageProvider provider, ICameraImageFactory factory,
+        public ComponentManager(IImageProvider provider, IImageFactory factory,
             IComponentConfiguration configuration, IApiManager manager)
         {
             apiManager = manager;
@@ -44,7 +44,7 @@ namespace RESTComponent.RTComponent.Manager
                 {
                     var comp = manager.CreateComponent<CameraStream>();
                     comp.ImageProvider = imageProvider;
-                    comp.CameraImageFactory = cameraImageFactory;
+                    comp.ImageFactory = cameraImageFactory;
                     comp.Configuration = componentConfiguration;
                     comp.ApiManager = apiManager;
 

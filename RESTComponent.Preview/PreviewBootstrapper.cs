@@ -11,13 +11,13 @@ using System.Windows.Media.Imaging;
 using Microsoft.Practices.Prism.UnityExtensions;
 using Microsoft.Practices.Unity;
 using RESTComponent.Api.Manager;
-using RESTComponent.CameraImages;
 using RESTComponent.Preview.View;
 using RESTComponent.Preview.ViewModel;
 using RESTComponent.RTComponent.Configuration;
 using RESTComponent.RTComponent.Manager;
 using RTM.Images.Decoder;
 using RTM.Images.Decoder.ImageSource;
+using RTM.Images.Factory;
 using RTM.Images.Provider;
 
 namespace RESTComponent.Preview
@@ -30,7 +30,7 @@ namespace RESTComponent.Preview
             Container.RegisterType<IImagesDecoder<BitmapImage>, BitmapImageDecoder>();
             Container.RegisterType<IImagesDecoder<Bitmap>, RTM.Images.Decoder.Bitmap.BitmapDecoder>();
 
-            Container.RegisterType<ICameraImageFactory, CameraImageFactory>();
+            Container.RegisterType<IImageFactory, ImageFactory>();
 
             Container.RegisterType<IStartup, Startup>();
             Container.RegisterType<IApiManager, ApiManager>(new ContainerControlledLifetimeManager());
@@ -57,8 +57,8 @@ namespace RESTComponent.Preview
 
             Container.Resolve<IComponentManager>().Start(null);
 
-            App.Current.MainWindow = (Window) Shell;
-            App.Current.MainWindow.Show();
+            Application.Current.MainWindow = (Window) Shell;
+            Application.Current.MainWindow.Show();
         }
     }
 }

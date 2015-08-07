@@ -27,10 +27,7 @@ namespace RESTComponent.RTComponent.Configuration
 
                 defaultPort = value;
 
-                if (ConfigurationChanged != null)
-                {
-                    ConfigurationChanged(this, EventArgs.Empty);
-                }
+                ConfigurationChanged?.Invoke(this, EventArgs.Empty);
             }
         }
 
@@ -51,10 +48,7 @@ namespace RESTComponent.RTComponent.Configuration
 
                 defaultHost = newHost;
 
-                if (ConfigurationChanged != null)
-                {
-                    ConfigurationChanged(this, EventArgs.Empty);
-                }
+                ConfigurationChanged?.Invoke(this, EventArgs.Empty);
             }
         }
     }
