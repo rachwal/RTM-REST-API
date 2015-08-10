@@ -9,11 +9,11 @@ using System;
 using System.Threading.Tasks;
 using OpenRTM.Extension;
 using OpenRTM.IIOP;
+using RESTComponent.Api.Images;
 using RESTComponent.Api.Manager;
 using RESTComponent.RTComponent.Component;
 using RESTComponent.RTComponent.Configuration;
 using RTM.Images.Factory;
-using RTM.Images.Provider;
 
 namespace RESTComponent.RTComponent.Manager
 {
@@ -55,7 +55,7 @@ namespace RESTComponent.RTComponent.Manager
                 catch (Exception)
                 {
                     Console.WriteLine();
-                    Console.WriteLine("StartAsync naming service before running component");
+                    Console.WriteLine("Start naming service before running component");
                     Console.WriteLine(@"More info at http://www.openrtm.org/openrtm/en/node/1420");
                 }
             });

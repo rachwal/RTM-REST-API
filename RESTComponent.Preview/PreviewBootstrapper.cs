@@ -10,6 +10,7 @@ using System.Windows;
 using System.Windows.Media.Imaging;
 using Microsoft.Practices.Prism.UnityExtensions;
 using Microsoft.Practices.Unity;
+using RESTComponent.Api.Images;
 using RESTComponent.Api.Manager;
 using RESTComponent.Preview.View;
 using RESTComponent.Preview.ViewModel;
@@ -18,7 +19,6 @@ using RESTComponent.RTComponent.Manager;
 using RTM.Images.Decoder;
 using RTM.Images.Decoder.ImageSource;
 using RTM.Images.Factory;
-using RTM.Images.Provider;
 
 namespace RESTComponent.Preview
 {

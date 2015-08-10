@@ -9,10 +9,10 @@ using System;
 using System.Linq;
 using OpenRTM.Core;
 using OpenRTM.Extension;
+using RESTComponent.Api.Images;
 using RESTComponent.Api.Manager;
 using RESTComponent.RTComponent.Configuration;
 using RTM.Images.Factory;
-using RTM.Images.Provider;
 
 namespace RESTComponent.RTComponent.Component
 {
@@ -94,7 +94,8 @@ namespace RESTComponent.RTComponent.Component
                 Bpp = (ushort) image.Bpp,
                 Width = (ushort) image.Width,
                 Height = (ushort) image.Height,
-                Pixels = image.Pixels.ToList()
+                Pixels = image.Pixels.ToList(),
+                Format = image.Format
             };
             outport.Write(cameraImage);
         }
