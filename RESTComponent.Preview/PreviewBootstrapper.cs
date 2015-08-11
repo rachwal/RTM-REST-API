@@ -28,15 +28,12 @@ namespace RESTComponent.Preview
         {
             Container.RegisterType<IImageProvider, ImageProvider>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IImagesDecoder<BitmapImage>, BitmapImageDecoder>();
-            Container.RegisterType<IImagesDecoder<Bitmap>, RTM.Images.Decoder.Bitmap.BitmapDecoder>();
-
             Container.RegisterType<IImageFactory, ImageFactory>();
 
             Container.RegisterType<IStartup, Startup>();
             Container.RegisterType<IApiManager, ApiManager>(new ContainerControlledLifetimeManager());
 
-            Container.RegisterType<IComponentConfiguration, ComponentConfiguration>(
-                new ContainerControlledLifetimeManager());
+            Container.RegisterType<IComponentConfiguration, ComponentConfiguration>(new ContainerControlledLifetimeManager());
             Container.RegisterType<IComponentManager, ComponentManager>(new ContainerControlledLifetimeManager());
 
             Container.RegisterType<IPreviewViewModel, PreviewViewModel>();
