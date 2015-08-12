@@ -5,7 +5,6 @@
 // Created by Bartosz Rachwal. 
 // Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved. 
 
-using System.Drawing;
 using System.Windows;
 using System.Windows.Media.Imaging;
 using Microsoft.Practices.Prism.UnityExtensions;
@@ -33,7 +32,8 @@ namespace RESTComponent.Preview
             Container.RegisterType<IStartup, Startup>();
             Container.RegisterType<IApiManager, ApiManager>(new ContainerControlledLifetimeManager());
 
-            Container.RegisterType<IComponentConfiguration, ComponentConfiguration>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IComponentConfiguration, ComponentConfiguration>(
+                new ContainerControlledLifetimeManager());
             Container.RegisterType<IComponentManager, ComponentManager>(new ContainerControlledLifetimeManager());
 
             Container.RegisterType<IPreviewViewModel, PreviewViewModel>();

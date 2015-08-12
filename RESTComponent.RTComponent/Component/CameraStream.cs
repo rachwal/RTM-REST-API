@@ -6,13 +6,12 @@
 // Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved. 
 
 using System;
-using System.Linq;
 using OpenRTM.Core;
 using OpenRTM.Extension;
 using RESTComponent.Api.Images;
 using RESTComponent.Api.Manager;
+using RESTComponent.RTComponent.CameraImage;
 using RESTComponent.RTComponent.Configuration;
-using RTM.Images.Factory;
 
 namespace RESTComponent.RTComponent.Component
 {
@@ -28,7 +27,8 @@ namespace RESTComponent.RTComponent.Component
     [CustomProfile("Author", "Bartosz Rachwal")]
     public class CameraStream : DataFlowComponent
     {
-        [OutPort(PortName = "out")] private readonly OutPort<CameraImage> outport = new OutPort<CameraImage>();
+        [OutPort(PortName = "out")] private readonly OutPort<OpenRTM.Core.CameraImage> outport =
+            new OutPort<OpenRTM.Core.CameraImage>();
 
         private ConfigurationSet configurationSet;
         private int handle;
@@ -39,9 +39,9 @@ namespace RESTComponent.RTComponent.Component
         }
 
         public IImageProvider ImageProvider { get; set; }
-        public IImageFactory ImageFactory { get; set; }
         public IComponentConfiguration Configuration { get; set; }
         public IApiManager ApiManager { get; set; }
+        public ICameraImageFactory CameraImageFactory { get; set; }
 
         [Configuration(DefaultValue = "localhost", Name = "host")]
         public string Host
@@ -69,6 +69,19 @@ namespace RESTComponent.RTComponent.Component
             }
         }
 
+        [Configuration(DefaultValue = "0", Name = "pixelFormat")]
+        public int PixelFormat
+        {
+            get { return Configuration?.PixelFormat ?? 0; }
+            set
+            {
+                if (Configuration != null)
+                {
+                    Configuration.PixelFormat = value;
+                }
+            }
+        }
+
         protected override ReturnCode_t OnActivated(int execHandle)
         {
             handle = execHandle;
@@ -88,15 +101,9 @@ namespace RESTComponent.RTComponent.Component
         private void ImageProviderNewImage(object sender, EventArgs e)
         {
             var value = ImageProvider.EncodedImage;
-            var image = ImageFactory.Create(value);
-            var cameraImage = new CameraImage
-            {
-                Bpp = (ushort) image.Bpp,
-                Width = (ushort) image.Width,
-                Height = (ushort) image.Height,
-                Pixels = image.Pixels.ToList(),
-                Format = image.Format
-            };
+
+            var cameraImage = CameraImageFactory.Create(value);
+
             outport.Write(cameraImage);
         }
 

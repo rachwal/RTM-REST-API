@@ -13,6 +13,24 @@ namespace RESTComponent.RTComponent.Configuration
     {
         private string defaultHost = "+";
         private int defaultPort = 9000;
+        private int pixelFormat;
+
+        public int PixelFormat
+        {
+            get { return pixelFormat; }
+            set
+            {
+                if (value == pixelFormat)
+                {
+                    return;
+                }
+
+                pixelFormat = value;
+
+                ConfigurationChanged?.Invoke(this, EventArgs.Empty);
+            }
+        }
+
         public event EventHandler ConfigurationChanged;
 
         public int Port

@@ -13,6 +13,7 @@ namespace RESTComponent.RTComponent.Configuration
     {
         int Port { get; set; }
         string Host { get; set; }
+        int PixelFormat { get; set; }
         event EventHandler ConfigurationChanged;
     }
 }
