@@ -20,7 +20,7 @@ Getting started
 ---------------
 The system requirements and prerequisites for using RTM REST API are:
 * Supported architectures: x86 and x64.
-* Operating systems: Microsoft Windows 8, Microsoft Windows 7, Windows Server 2008 R2, Windows
+* Operating systems: Microsoft Windows 10, Microsoft Windows 8, Microsoft Windows 7, Windows Server 2008 R2, Windows
 Server 2012.
 * Supported .NET Frameworks: Microsoft .NET Framework 4.5 or higher
 * Microsoft [Visual Studio](https://www.visualstudio.com).
