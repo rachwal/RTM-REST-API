@@ -5,6 +5,7 @@
 // Created by Bartosz Rachwal. 
 // Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved. 
 
+using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Media.Imaging;
@@ -39,7 +40,7 @@ namespace RESTComponent.RTComponent.CameraImage
                 Format = image.Format,
                 Width = (ushort) image.Width,
                 Height = (ushort) image.Height,
-                Pixels = image.Pixels.ToList()
+                Pixels = new List<byte>(image.Pixels.ToList().AsReadOnly())
             };
         }
 
@@ -52,7 +53,7 @@ namespace RESTComponent.RTComponent.CameraImage
                 Format = image.Format,
                 Width = (ushort) image.Width,
                 Height = (ushort) image.Height,
-                Pixels = image.Pixels.ToList()
+                Pixels = new List<byte>(image.Pixels.ToList().AsReadOnly())
             };
         }
 
