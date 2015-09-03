@@ -3,7 +3,7 @@
 // PreviewViewModel.cs
 // 
 // Created by Bartosz Rachwal. 
-// Copyright (c) 2015 The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved. 
+// Copyright (c) 2015 Bartosz Rachwal. The National Institute of Advanced Industrial Science and Technology, Japan. All rights reserved. 
 
 using System;
 using System.ComponentModel;
@@ -18,12 +18,8 @@ namespace RESTComponent.Preview.ViewModel
 {
     public class PreviewViewModel : IPreviewViewModel, INotifyPropertyChanged
     {
-        private readonly IImageProvider provider;
         private readonly IImagesDecoder<BitmapImage> decoder;
-
-        public ImageSource PreviewImage { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
+        private readonly IImageProvider provider;
 
         public PreviewViewModel(IImageProvider imageProvider, IImagesDecoder<BitmapImage> imagesDecoder)
         {
@@ -31,6 +27,10 @@ namespace RESTComponent.Preview.ViewModel
             provider = imageProvider;
             provider.NewImage += OnNewImage;
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public ImageSource PreviewImage { get; set; }
 
         private void OnNewImage(object sender, EventArgs e)
         {

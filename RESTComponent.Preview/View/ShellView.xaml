@@ -6,6 +6,6 @@
         mc:Ignorable="d"
         Title="RESTComponent Image Preview" Height="350" Width="525">
     <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-        <Image Source="{Binding PreviewImage}" Stretch="Uniform"/>
+        <Image Source="{Binding PreviewImage}" Stretch="Uniform" />
     </Grid>
 </Window>
